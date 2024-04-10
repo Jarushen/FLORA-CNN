@@ -23,38 +23,7 @@ The dataset can be found here:
 
 # Model 1
 
-Layer Type Configuration Justification
-3.5. DESIGN 1: BASELINE MODEL
-  
-Conv2D
-32 filters, 3x3 kernel
-First convolutional layer to capture basic features like edges and textures of leaves. Small kernel sizes of 3x3 are intended to capture finer details in the leaves as discussed in 2.3.2.
-MaxPooling2D
-2x2 pool size
-Reduces spatial dimensions, aiding in feature extraction and reducing computational load. Max Pooling is chosen over average pooling as it is superior for image feature recognition as discussed in 2.3.2.
-Conv2D
-64 filters, 3x3 kernel
-Increases complexity to capture more detailed features. The model is moving onto more complex features in the leaves now such as clusters or veins.
-MaxPooling2D 2x2 pool size Same as above. 82
- 
-3.5. DESIGN 1: BASELINE MODEL
- Layer Type Configuration Justification
-MaxPooling2D 2x2 pool size Same as above.
-Conv2D
-128 filters, 3x3 kernel
-Further increases the network’s ability to recognize complex patterns.
-Flatten
--
-Flattens the output for the dense layer processing.
-Dropout
-0.5
-Set to 50% to effectively prevent over-fitting by randomly turning off half of the neurons in the dropout layers during training. This helps the model generalize better to unseen data which is vital for reducing over-fitting in the small dataset. This was discussed in 2.3.2 and is the only regularisation applied to the Baseline Model.
-Dense
-128 units
-Dense layer for learning non-linear combinations of features.
-Dense
-Output units, Softmax
-Final layer for multi-class classification, with units equal to the number of classes in each dataset.
+
 # Model 2
 
 # Model 3 
